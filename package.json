@@ -1,0 +1,48 @@
+{
+  "name": "lint",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "prepare": "husky install",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx,.vue --fix --quiet  --ignore-path .gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json,vue}\" ",
+    "lint:style": "stylelint src/**/*.{css,less,scss,vue} --fix ",
+    "commit": "cz",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "stylelint": "^13.13.1",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-vue": "^7.15.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.3.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "eslint.alwaysShowStatus": true,
+    "eslint.quiet": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "eslint.validate": [
+        "html",
+        "javascript",
+        "vue"
+    ]
+}
